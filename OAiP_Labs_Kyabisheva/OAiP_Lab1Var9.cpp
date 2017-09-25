@@ -11,7 +11,7 @@ int main()
 	float hnd = dm * 0.984252;
 	float vrst = hnd * 9.52381e-5;
 	//
-	cout << "Введите что-то" << endl;
+	cout << "Введите расстояние в дециметрах" << endl;
 	cin >> dm;
 	if(!dm){
 		while(!(cin >> dm)){
@@ -22,10 +22,10 @@ int main()
 	}
 	//
 	hnd = dm * 0.984252;
-	cout << ("dsdsd ", hnd) << endl;
+	cout << ("Расстояние в ладонях равно ", hnd) << endl;
 	//
 	vrst = hnd * 9.52381e-5;
-	cout << ("ffddfdf ", vrst) << endl;
+	cout << ("Расстояние в верстах равно ", vrst) << endl;
 	//
 	system("pause");
 	return 0;
