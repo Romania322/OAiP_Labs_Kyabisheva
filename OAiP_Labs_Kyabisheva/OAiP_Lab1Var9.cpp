@@ -14,8 +14,8 @@ int main()
 	system("chcp 1251");
 	system("cls");
 	int dm;
-	float hnd = dm * 0.984252;
-	float vrst = hnd * 9.52381e-5;
+	float hnd;
+	float vrst;
 	//Введение переменных
 	cout << "Введите расстояние в дециметрах" << endl;
 	cin >> dm;
