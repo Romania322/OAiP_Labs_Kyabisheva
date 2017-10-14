@@ -19,7 +19,7 @@ void main()
 	//
 	if(!scanf ("%d", &DM))
 	{
-		while(!())
+		while(!(scanf ("%d", &DM)))
 		{
 			printf ("Ошибка ввода. Повторите попыку \n");
 			while (getchar () != '\n');
