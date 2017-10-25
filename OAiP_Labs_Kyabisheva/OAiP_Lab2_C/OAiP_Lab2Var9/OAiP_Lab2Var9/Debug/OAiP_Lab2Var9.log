@@ -1,0 +1,8 @@
+﻿  Source.cpp
+d:\sfedu2\mafi\lab2_for_mafi\lab2_for_mafi\source.cpp(10): warning C4013: system: нет определения; предполагается "extern" с возвратом типа "int"
+d:\sfedu2\mafi\lab2_for_mafi\lab2_for_mafi\source.cpp(24): warning C4013: malloc: нет определения; предполагается "extern" с возвратом типа "int"
+d:\sfedu2\mafi\lab2_for_mafi\lab2_for_mafi\source.cpp(37): warning C4013: abs: нет определения; предполагается "extern" с возвратом типа "int"
+d:\sfedu2\mafi\lab2_for_mafi\lab2_for_mafi\source.cpp(58): warning C4013: _getch: нет определения; предполагается "extern" с возвратом типа "int"
+d:\sfedu2\mafi\lab2_for_mafi\lab2_for_mafi\source.cpp(24): warning C4047: инициализация: "int *" отличается по уровням косвенного обращения от "int"
+  lab2_for_Mafi.vcxproj -> D:\sfedu2\Mafi\lab2_for_Mafi\Debug\lab2_for_Mafi.exe
+  lab2_for_Mafi.vcxproj -> D:\sfedu2\Mafi\lab2_for_Mafi\Debug\lab2_for_Mafi.pdb (Partial PDB)
