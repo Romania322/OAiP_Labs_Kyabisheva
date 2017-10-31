@@ -15,10 +15,7 @@
  	system("cls"); 		
  	int size_of_array;	 		
  	printf("Введите размер массива ");
- 	function(&sizeOfArray);		
- 	while (!(sizeOfArray > 0)) {		
- 		function(&sizeOfArray);		
- 	}		 		
+ 	function(&sizeOfArray);				 		
  	int *array = (int*)malloc(sizeOfArray * sizeof(int));	 		
  	for (int i = 0; i < sizeOfArray; i++) {		
  		printf("Введите %d Элемент массива ", i + 1);		
