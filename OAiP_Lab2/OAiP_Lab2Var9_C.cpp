@@ -10,8 +10,7 @@
  #include <stdlib.h>		
  		
  void function(int*address);
- int main () {		
- 		
+ int main () {
  	system("chcp 1251");		
  	system("cls"); 		
  	int size_of_array;	 		
