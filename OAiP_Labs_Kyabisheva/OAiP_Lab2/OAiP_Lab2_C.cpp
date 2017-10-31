@@ -5,15 +5,12 @@
 Задание: Написать программу, которая выводит на экран простые числа. Массив и его длина вводятся пользователем.
 */
 #define _CRT_SECURE_NO_WARNINGS 		
- 		
  #include <stdio.h> 		
  #include <conio.h> 		
- #include <stdlib.h>		
- 		
- void function(int*address);		
- 		
- int main () {		
- 		
+ #include <stdlib.h>
+
+ void function(int*address); 		
+ int main () {	 		
  	system("chcp 1251");		
  	system("cls");
  	int size_of_array;
