@@ -41,13 +41,13 @@
  }	 		
  void function(int*address) {		
  	int nmbr;		
- 	while (!scanf("%d", &nmbr)) {		
+ 	while (!scanf("%d", &number)) {		
  		printf("Ошибка ввода. Повторите попытку ");		
  		while (getchar() != '\n');		
  	}		
  	if (getchar() != '\n') {		
  		printf("Ошибка ввода. Повторите попытку ");		
- 		function(&nmbr);		
+ 		function(&number);		
  	}		
- 	*address = nmbr;		
+ 	*address = number;		
 }
