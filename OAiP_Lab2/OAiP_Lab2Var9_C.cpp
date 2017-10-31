@@ -1,8 +1,8 @@
 /*
-Кябишева Александра Зауровна
-Лабораторная работа №2
-Вариант 9
-Задание: Написать программу, которая выводит на экран простые числа. Массив и его длина вводятся пользователем.
+РљСЏР±РёС€РµРІР° РђР»РµРєСЃР°РЅРґСЂР° Р—Р°СѓСЂРѕРІРЅР°
+Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р° в„–2
+Р’Р°СЂРёР°РЅС‚ 9
+Р—Р°РґР°РЅРёРµ: РќР°РїРёСЃР°С‚СЊ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ РІС‹РІРѕРґРёС‚ РЅР° СЌРєСЂР°РЅ РїСЂРѕСЃС‚С‹Рµ С‡РёСЃР»Р°. РњР°СЃСЃРёРІ Рё РµРіРѕ РґР»РёРЅР° РІРІРѕРґРёС‚СЃСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј.
 */
 #define _CRT_SECURE_NO_WARNINGS 
  #include <stdio.h> 		
@@ -15,17 +15,17 @@
  	system("chcp 1251");		
  	system("cls"); 		
  	int size_of_array;	 		
- 	printf("Введите размер масива ");
- 	function(&size_of_array);		
- 	while (!(size_of_array > 0)) {		
- 		function(&size_of_array);		
+ 	printf("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° ");
+ 	function(&sizeOfArray);		
+ 	while (!(sizeOfArray > 0)) {		
+ 		function(&sizeOfArray);		
  	}		 		
- 	int *array = (int*)malloc(size_of_array * sizeof(int));	 		
- 	for (int i = 0; i < size_of_array; i++) {		
- 		printf("Введите %d элемент массива ", i + 1);		
+ 	int *array = (int*)malloc(sizeOfArray * sizeof(int));	 		
+ 	for (int i = 0; i < sizeOfArray; i++) {		
+ 		printf("Р’РІРµРґРёС‚Рµ %d Р­Р»РµРјРµРЅС‚ РјР°СЃСЃРёРІР° ", i + 1);		
  		function(&array[i]);		
  	} 		
- 	for (int i = 0; i < size_of_array; i++) {		
+ 	for (int i = 0; i < sizeOfArray; i++) {		
  		if(abs(array[i])<=3){		
  			printf("%d ", array[i]);		
  		}		
@@ -46,11 +46,11 @@
  void function(int*address) {		
  	int nmbr;		
  		while (!scanf("%d", &nmbr)) {		
- 			printf("Ошибка ввода. Повторите попытку ");		
+ 			printf("РћС€РёР±РєР° РІРІРѕРґР°. РџРѕРІС‚РѕСЂРёС‚Рµ РїРѕРїС‹С‚РєСѓ ");		
  			while (getchar() != '\n');		
  		}		
  	if (getchar() != '\n') {		
- 		printf("Ошибка ввода.Повторите попытку ");		
+ 		printf("РћС€РёР±РєР° РІРІРѕРґР°. РџРѕРІС‚РѕСЂРёС‚Рµ РїРѕРїС‹С‚РєСѓ ");		
  		function(&nmbr);		
  	}		
  	*address = nmbr;		
