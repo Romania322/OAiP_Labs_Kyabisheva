@@ -1,8 +1,8 @@
 /*
-Êÿáèøåâà Àëåêñàíäðà Çàóðîâíà
-Ëàáîðàòîðíàÿ ðàáîòà ¹2
-Âàðèàíò 9
-Çàäàíèå: Íàïèñàòü ïðîãðàììó, êîòîðàÿ âûâîäèò íà ýêðàí ïðîñòûå ÷èñëà. Ìàññèâ è åãî äëèíà ââîäÿòñÿ ïîëüçîâàòåëåì.
+ÐšÑÐ±Ð¸ÑˆÐµÐ²Ð° ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ€Ð° Ð—Ð°ÑƒÑ€Ð¾Ð²Ð½Ð°
+Ð›Ð°Ð±Ð¾Ñ€Ð°Ñ‚Ð¾Ñ€Ð½Ð°Ñ Ñ€Ð°Ð±Ð¾Ñ‚Ð° â„–2
+Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚ 9
+Ð—Ð°Ð´Ð°Ð½Ð¸Ðµ: ÐÐ°Ð¿Ð¸ÑÐ°Ñ‚ÑŒ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ, ÐºÐ¾Ñ‚Ð¾Ñ€Ð°Ñ Ð²Ñ‹Ð²Ð¾Ð´Ð¸Ñ‚ Ð½Ð° ÑÐºÑ€Ð°Ð½ Ð¿Ñ€Ð¾ÑÑ‚Ñ‹Ðµ Ñ‡Ð¸ÑÐ»Ð°. ÐœÐ°ÑÑÐ¸Ð² Ð¸ ÐµÐ³Ð¾ Ð´Ð»Ð¸Ð½Ð° Ð²Ð²Ð¾Ð´ÑÑ‚ÑÑ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÐµÐ¼.
 */
 #define _CRT_SECURE_NO_WARNINGS 		
  		
@@ -15,23 +15,18 @@
  int main () {		
  		
  	system("chcp 1251");		
- 	system("cls");		
- 		
- 	int size_of_array;		
- 		
- 	printf("Ââåäèòå ðàçìåð ìàñèâà ");		
+ 	system("cls");
+ 	int size_of_array;
+ 	printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÐ¸Ð²Ð° ");		
  	function(&size_of_array);		
  	while (!(size_of_array > 0)) {		
  		function(&size_of_array);		
- 	}		
- 		
- 	int *array = (int*)malloc(size_of_array * sizeof(int));		
- 		
+ 	}	
+ 	int *array = (int*)malloc(size_of_array * sizeof(int));	
  	for (int i = 0; i < size_of_array; i++) {		
- 		printf("Ââåäèòå %d ýëåìåíò ìàññèâà ", i + 1);		
+ 		printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ %d ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¼Ð°ÑÑÐ¸Ð²Ð° ", i + 1);		
  		function(&array[i]);		
- 	}		
- 		
+ 	}	
  	for (int i = 0; i < size_of_array; i++) {		
  		if(abs(array[i])<=3){		
  			printf("%d ", array[i]);		
@@ -49,16 +44,15 @@
  	}		
  	_getch();
 	 return 0;		
- }		
- 		
+ }	
  void function(int*address) {		
  	int nmbr;		
  		while (!scanf("%d", &nmbr)) {		
- 			printf("Îøèáêà ââîäà. Ïîâòîðèòå ïîïûòêó ");		
+ 			printf("ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°. ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð¿Ð¾Ð¿Ñ‹Ñ‚ÐºÑƒ ");		
  			while (getchar() != '\n');		
  		}		
  	if (getchar() != '\n') {		
- 		printf("Îøèáêà ââîäà.Ïîâòîðèòå ïîïûòêó: ");		
+ 		printf("ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°.ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð¿Ð¾Ð¿Ñ‹Ñ‚ÐºÑƒ ");		
  		function(&nmbr);		
  	}		
  	*address = nmbr;		
