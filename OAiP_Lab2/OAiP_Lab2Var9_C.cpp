@@ -25,7 +25,7 @@
  		function(&array[i]);		
  	} 		
  	for (int i = 0; i < sizeOfArray; i++) {		
- 		if(abs(array[i]) <= 3){		
+ 		if(abs(array[i]) <= 3) {		
  			printf("%d ", array[i]);		
  		}		
  		else {		
