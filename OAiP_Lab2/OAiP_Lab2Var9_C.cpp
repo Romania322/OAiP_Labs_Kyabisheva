@@ -13,7 +13,7 @@
  int main () {
  	system("chcp 1251");		
  	system("cls"); 		
- 	int size_of_array;	 		
+ 	int sizeOfArray;	 		
  	printf("Введите размер массива ");
  	function(&sizeOfArray);				 		
  	int *array = (int*)malloc(sizeOfArray * sizeof(int));	 		
@@ -40,7 +40,7 @@
 	 return 0;		
  }	 		
  void function(int*address) {		
- 	int nmbr;		
+ 	int number;		
  	while (!scanf("%d", &number)) {		
  		printf("Ошибка ввода. Повторите попытку ");		
  		while (getchar() != '\n');		
