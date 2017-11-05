@@ -9,37 +9,24 @@
 #include <conio.h> 		
 #include <stdlib.h>		
 
-void function(int*address);
+int verificationSizeOfArray(int*address);
+int verificationArray ();
 int main() {
 	system("chcp 1251");
 	system("cls");
 	int sizeOfArray;
 	printf("Введите размер массива ");
-	sizeOfArray = function();
+	sizeOfArray = verificationSizeOfArray();
 	int *array = (int*)malloc(sizeOfArray * sizeof(int));
 	for (int i = 0; i < sizeOfArray; i++) {
 		printf("Введите %d Элемент массива ", i + 1);
-		function(&array[i]);
+		verificationSizeOfArray(&array[i]);
 	}
-	for (int i = 0; i < sizeOfArray; i++) {
-		if (abs(array[i]) <= 3) {
-			printf("%d ", array[i]);
-		}
-		else {
-			for (int j = 2; j < array[i]; j++) {
-				if (array[i] % j == 0) {
-					break;
-				}
-				if (j == array[i] - 1) {
-					printf("%d ", array[i]);
-				}
-			}
-		}
-	}
+	verificationArray (); 
 	_getch();
 	return 0;
 }
-int function() {
+int verificationSizeOfArray() {
 	int number;
 	while (!scanf("%d", &number)) {
 		printf("Ошибка ввода. Повторите попытку ");
@@ -47,7 +34,28 @@ int function() {
 	}
 	if (getchar() != '\n') {
 		printf("Ошибка ввода. Повторите попытку ");
-		function(&number);
+		verificationSizeOfArray(&number);
 	}
 	return = number;
+}
+int verificationArray () {
+	int sizeOfArray;
+	int i;
+	int array[i];
+	for (int i = 0; i < sizeOfArray; i++) {		
+ 		if (abs(array[i]) <= 3) {		
+ 			printf ("%d ", array[i]);		
+ 		}		
+ 		else {		
+ 			for (int j = 2; j < array[i]; j++) {		
+ 				if (array[i] % j == 0) {		
+ 					break;		
+ 				}		
+ 				if (j == array[i] - 1) {		
+ 					printf ("%d ", array[i]);		
+ 				}		
+ 			}		
+ 		}		
+ 	}
+	 return 0;		
 }
