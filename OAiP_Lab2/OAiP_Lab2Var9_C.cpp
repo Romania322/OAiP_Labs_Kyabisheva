@@ -9,8 +9,8 @@
 #include <conio.h> 		
 #include <stdlib.h>		
 
-int verificationSizeOfArray(int*address);
-int verificationArray ();
+int verificationSizeOfArray();
+int verificationArray(int*array, int sizeOfArray);
 int main() {
 	system("chcp 1251");
 	system("cls");
@@ -20,9 +20,9 @@ int main() {
 	int *array = (int*)malloc(sizeOfArray * sizeof(int));
 	for (int i = 0; i < sizeOfArray; i++) {
 		printf("Введите %d Элемент массива ", i + 1);
-		verificationSizeOfArray(&array[i]);
+		array[i] = verificationSizeOfArray();
 	}
-	verificationArray (); 
+	verificationArray(array, sizeOfArray); 
 	_getch();
 	return 0;
 }
@@ -34,14 +34,12 @@ int verificationSizeOfArray() {
 	}
 	if (getchar() != '\n') {
 		printf("Ошибка ввода. Повторите попытку ");
-		verificationSizeOfArray(&number);
+		number = verificationSizeOfArray();
 	}
-	return = number;
+	return number;
 }
-int verificationArray () {
-	int sizeOfArray;
+int verificationArray(int*array, int sizeOfArray) {
 	int i;
-	int array[i];
 	for (int i = 0; i < sizeOfArray; i++) {		
  		if (abs(array[i]) <= 3) {		
  			printf ("%d ", array[i]);		
