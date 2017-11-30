@@ -15,7 +15,7 @@ int main ()
 {
 	system ("chcp 1251");		
 	system ("cls"); 	
-	printf ("Введите текст \n");
+	printf ("Р’РІРµРґРёС‚Рµ С‚РµРєСЃС‚ \n");
 	char StringText [MAX_LENGTH] = "";
 	fgets (StringText, MAX_LENGTH, stdin);
 	handlindText (StringText);
