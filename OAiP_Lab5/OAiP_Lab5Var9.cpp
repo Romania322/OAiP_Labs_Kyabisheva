@@ -29,22 +29,22 @@ struct AutoOwner
 	char OtdGIBDD [MAX_LENGTH_OTDGIBDD];
 };
 
-void choiceDemand(); //выбор запроса
-void additionStructure (); //дополнение структурами
-void inputStructure (); //ввод структур
-void addWord (char *word_new, char *word);//пересахронение строки
-void searchStructure (); //поиск структуры
+void choiceDemand();
+void additionStructure ();
+void inputStructure ();
+void addWord (char *word_new, char *word);
+void searchStructure ();
 int scanTabulation (char* StringText);
 int shiftText (char *word, char *searchValue, int inquiryDemand);
-void outputStructure (); //выводд структур
-void streamliningStructure (); //упорядочение структур
+void outputStructure ();
+void streamliningStructure ();
 void swap(struct AutoOwner *carStructs1, struct AutoOwner *carStructs2);
 
 int main ()
 {
 	system ("chcp 1251");
 	system ("cls");
-	printf ("Введите номер запроса:\n");
+	printf ("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р·Р°РїСЂРѕСЃР°:\n");
 	choiceDemand ();
 	_getch ();
 	return 0;
@@ -52,11 +52,11 @@ int main ()
 
 void choiceDemand ()
 {
-	printf ("1)Дополнение массива структур;\n");
-	printf ("2)Поиск структуры с заданым значением;\n");
-	printf ("3)Вывод структур на экран;\n");
-	printf ("4)Упорядочение по заданному полю;\n");
-	printf ("5)Выход из программы;\n");
+	printf ("1)Р”РѕРїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° СЃС‚СЂСѓРєС‚СѓСЂ;\n");
+	printf ("2)РџРѕРёСЃРє СЃС‚СЂСѓРєС‚СѓСЂС‹ СЃ Р·Р°РґР°РЅС‹Рј Р·РЅР°С‡РµРЅРёРµРј;\n");
+	printf ("3)Р’С‹РІРѕРґ СЃС‚СЂСѓРєС‚СѓСЂ РЅР° СЌРєСЂР°РЅ;\n");
+	printf ("4)РЈРїРѕСЂСЏРґРѕС‡РµРЅРёРµ РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РїРѕР»СЋ;\n");
+	printf ("5)Р’С‹С…РѕРґ РёР· РїСЂРѕРіСЂР°РјРјС‹;\n");
 	int inquiry = 0;
 	scanf ("%d", &inquiry);
 	switch (inquiry)
@@ -82,13 +82,13 @@ void choiceDemand ()
 
 void additionStructure ()
 {
-	printf ("Введите количество структур\n");
+	printf ("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂСѓРєС‚СѓСЂ\n");
 	int numberOfStruct = 0;
 	scanf ("%d", &numberOfStruct);
 	int i;
 	for (i = 0; i < numberOfStruct; i++)
 	{
-		printf ("Введите структуру № %d \n", i + 1);
+		printf ("Р’РІРµРґРёС‚Рµ СЃС‚СЂСѓРєС‚СѓСЂСѓ в„– %d \n", i + 1);
 		inputStructure ();
 	}
 }
@@ -96,17 +96,17 @@ void additionStructure ()
 void inputStructure ()
 {
 	struct 	AutoOwner owner;
-	printf ("Введите имя владельца: ");
+	printf ("Р’РІРµРґРёС‚Рµ РёРјСЏ РІР»Р°РґРµР»СЊС†Р°: ");
 	scanf ("%s", &owner.Name);
-	printf ("Введите номер машины: ");
+	printf ("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РјР°С€РёРЅС‹: ");
 	scanf ("%s", &owner.AutoNum);
-	printf ("Введите номер техпаспорта: ");
+	printf ("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ С‚РµС…РїР°СЃРїРѕСЂС‚Р°: ");
 	scanf ("%s", &owner.NumTechPass);
-	printf ("Введите дата рождения: ");
+	printf ("Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ СЂРѕР¶РґРµРЅРёСЏ: ");
 	scanf ("%s", &owner.Birthdate);
-	printf ("Введите номер телефона: ");
+	printf ("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°: ");
 	scanf ("%s", &owner.PhoneNumber);
-	printf ("Введите отделение ГИБДД: ");
+	printf ("Р’РІРµРґРёС‚Рµ РѕС‚РґРµР»РµРЅРёРµ Р“РР‘Р”Р”: ");
 	scanf ("%s", &owner.OtdGIBDD);
 	FILE *OAiP_Lab5Var9 = fopen ("OAiP_Lab5Var9.txt", "a");
 	if (OAiP_Lab5Var9 == NULL)
@@ -125,16 +125,16 @@ void inputStructure ()
 
 void searchStructure ()
 {
-	printf ("Выберите параметр поиска");
-	printf ("1) Имя\n");
-	printf ("2) Номер машины\n");
-	printf ("3) Номер техпаспорта\n");
-	printf ("4) Дата рождения\n");
-	printf ("5) Номер телефона\n");
-	printf ("6) Отделение ГИБДД\n");
+	printf ("Р’С‹Р±РµСЂРµС‚Рµ РїР°СЂР°РјРµС‚СЂ РїРѕРёСЃРєР°");
+	printf ("1) РРјСЏ\n");
+	printf ("2) РќРѕРјРµСЂ РјР°С€РёРЅС‹\n");
+	printf ("3) РќРѕРјРµСЂ С‚РµС…РїР°СЃРїРѕСЂС‚Р°\n");
+	printf ("4) Р”Р°С‚Р° СЂРѕР¶РґРµРЅРёСЏ\n");
+	printf ("5) РќРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°\n");
+	printf ("6) РћС‚РґРµР»РµРЅРёРµ Р“РР‘Р”Р”\n");
 	int inquiryDemand = 0;
 	scanf ("%d", &inquiryDemand);
-	printf ("Введите значение\n");
+	printf ("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ\n");
 	char searchValue [MAX_LENGTH_OTDGIBDD];
 	scanf ("%s", &searchValue);
 	char scanStruct [MAX_LENGTH];
@@ -199,7 +199,7 @@ void outputStructure ()
 	FILE *OAiP_Lab5Var9 = fopen ("OAiP_Lab5Var9.txt", "r");
 	if (OAiP_Lab5Var9 == NULL)
 	{
-		printf ("Файл не найден/n");
+		printf ("Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ/n");
 	}
 	else
 	{
@@ -221,7 +221,7 @@ void streamliningStructure()
 	FILE *OAiP_Lab5Var9 = fopen ("OAiP_Lab5Var9.txt", "rt");
 	if (OAiP_Lab5Var9 == NULL)
 	{
-		printf ("Ошибка");
+		printf ("РћС€РёР±РєР°");
 	}
 	else 
 	{
